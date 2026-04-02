@@ -1,0 +1,10 @@
+boto3
+python-dotenv
+manim
+mutagen
+imageio-ffmpeg
+sounddevice
+numpy
+scipy
+gTTS
+deepgram-sdk

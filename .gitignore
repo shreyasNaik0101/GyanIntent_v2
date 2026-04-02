@@ -1,0 +1,16 @@
+v/
+__pycache__/
+*.mp4
+*.wav
+*.mp3
+temp_audio/
+temp_video/
+generated_code/
+output/
+.env
+.ipynb_checkpoints/
+*.log
+*.bak
+backup/
+migration_temp/
+security_cleanup/
