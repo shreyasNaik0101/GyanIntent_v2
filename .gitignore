@@ -1,16 +1,69 @@
+# OS/editor
+.DS_Store
+.vscode/
+.windsurf/
+
+# Python environments
 v/
-__pycache__/
+.venv/
+venv/
+env/
+ENV/
+**/.venv/
+**/venv/
+**/env/
+**/ENV/
+
+# Media files
 *.mp4
 *.wav
 *.mp3
+final_output_*.mp4
+input.wav
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Local runtime/cache artifacts
+.wwebjs_auth/
+.wwebjs_cache/
+*.log
 temp_audio/
 temp_video/
 generated_code/
 output/
-.env
-.ipynb_checkpoints/
-*.log
-*.bak
-backup/
-migration_temp/
-security_cleanup/
+**/temp_audio/**
+**/temp_video/**
+**/generated_code/**
+**/output/**
+
+# Archives
+*.zip
+
+# Built-in / generated Manim videos
+Gyan_Intent/frontend/public/videos/*.mp4
+Gyan_Intent/backend/media/
+Gyan__snapshot_push/backend/media/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Next.js build
+.next/
+out/
+
+# Misc
+*.so
+*.egg-info/
+dist/
+build/
+.coverage
