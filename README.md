@@ -1,6 +1,6 @@
-# Gyan-IntentAWS: Multilingual Visual AI Tutor 🎓✨
+# GyanIntent: Multilingual Visual AI Tutor 🎓✨
 
-**Gyan-IntentAWS** is a state-of-the-art AI tutoring engine that transforms real-time speech or text into dynamic, visual physics, math, and programming explanations on-the-fly. Designed for high-impact STEM education, it bridges the gap between abstract theory and visual intuition using the power of Generative AI and mathematical animations.
+**GyanIntent** is a state-of-the-art AI tutoring engine that transforms real-time speech or text into dynamic, visual physics, math, and programming explanations on-the-fly. Designed for high-impact STEM education, it bridges the gap between abstract theory and visual intuition using the power of Generative AI and mathematical animations.
 
 ---
 
