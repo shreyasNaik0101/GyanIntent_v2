@@ -4,12 +4,18 @@
 
 ---
 
+## 📺 Project Demo & Showcases
+- **Core Workflow Demo**: [Watch on ScreenRec](https://screenrec.com/share/EOuhMJ4aXq)
+- **Deep-Dive Presentation**: [Watch on Tella.tv](https://www.tella.tv/video/shreyass-video-44gc)
+
+---
+
 ## 🚀 Key Features
 
 ### 🌍 Truly Multilingual
 *   **Native Support**: High-accuracy results for **English**, **Hindi**, **Marathi**, **Telugu**, and **Kannada**.
 *   **Hybrid Intelligence**: Seamlessly handles "Hinglish," "Kanglish," and other mixed-language inputs.
-*   **Intelligent ID**: Automatically detects the spoken language and responds in the same language.
+*   **Intelligent Identification**: Automatically detects the spoken language and responds in the same language.
 
 ### 🎥 Visual-First Explanations
 *   **Manim Engine**: Leverages the power of the *Mathematical Animation Engine* for professional-grade visuals.
@@ -17,20 +23,22 @@
 *   **Visual Logic**: Optimized LLM prompting to prioritize geometric shapes and motion over text-heavy slides.
 
 ### 🎙️ Hybrid Audio Pipeline
-*   **Studio Quality**: Uses **Deepgram Aura** for exceptionally fast and clear English narration.
+*   **Studio Quality**: Uses **Deepgram Aura** (v6.1+) for exceptionally fast and clear English narration.
 *   **Regional Accuracy**: **AWS Polly (Neural)** powered voices for Indian languages.
-*   **Universal Fallback**: Integrated **gTTS** (Google Text-to-Speech) for native Kannada support and account/region failovers.
-*   **Seamless Start**: Implements a 500ms SSML silence buffer to prevent audio clipping on start.
+*   **Universal Fallback**: Integrated **gTTS** (Google Text-to-Speech) for native regional support and failovers.
+*   **Sub-Second Feedback**: Optimized WebSocket streaming ensures low-latency response times.
 
 ---
 
 ## 🏗️ Technical Architecture
 
-*   **LLM Core**: AWS Bedrock (**Claude 3.5 Sonnet**) for technical reasoning and Manim code generation.
-*   **Visuals**: Python-based **Manim** engine.
-*   **STT (Speech-to-Text)**: **Amazon Transcribe Streaming** for real-time, low-latency live transcription.
-*   **TTS (Text-to-Speech)**: Hybrid **Deepgram**, **AWS Polly**, and **gTTS** setup.
-*   **Orchestration**: Serialized logic pipeline for rock-solid reliability in hackathon environments.
+- **LLM Core**: AWS Bedrock (**Claude 3.5 Sonnet**) for technical reasoning and Manim code generation.
+- **Visuals**: Python-based **Manim Shell**.
+- **STT (Speech-to-Text)**: 
+  - **Deepgram SDK v6.1**: Real-time streaming for English/Universal.
+  - **Amazon Transcribe**: Specialized live path for regional Indian languages.
+- **TTS (Text-to-Speech)**: Hybrid **Deepgram Aura**, **AWS Polly**, and **gTTS**.
+- **Orchestration**: Serialized logic pipeline implemented in Python with `asyncio`.
 
 ---
 
@@ -44,6 +52,7 @@
 ### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
+pip install deepgram-sdk==6.1.1 websockets==12.0 amazon-transcribe
 ```
 
 ### 3. Environment Configuration
@@ -65,7 +74,12 @@ To start the interactive AI tutor via your microphone:
 python pipeline.py --mic
 ```
 
-The system will record your speech, detect the language, generate the visual explanation, and play the final video with synced multilingual narration!
+The system will:
+1.  **Listen**: Capture your speech in real-time.
+2.  **Think**: Use Claude 3.5 to generate the mathematical concept and animation code.
+3.  **Animate**: Render a dynamic Manim video.
+4.  **Narrate**: Synthesize text-to-speech in the detected language.
+5.  **Present**: Merge and play the final visual explanation!
 
 ---
 

@@ -7,6 +7,7 @@ def text_to_speech(text, language='en'):
     """
     Converts text to speech using Deepgram Aura for English, 
     with fallback to AWS Polly/gTTS for regional Indian languages.
+    Updated for deepgram-sdk v6.1.1.
     """
     os.makedirs(AUDIO_OUTPUT_DIR, exist_ok=True)
     output_path = os.path.join(AUDIO_OUTPUT_DIR, "explanation.wav")
@@ -17,11 +18,13 @@ def text_to_speech(text, language='en'):
         try:
             client = DeepgramClient(api_key=DEEPGRAM_API_KEY)
             
+            # v6.1.1 uses keyword arguments for the audio client
             response = client.speak.v1.audio.generate(
                 text=text,
                 model=DEEPGRAM_TTS_EN_VOICE,
             )
             
+            # response is an iterator of bytes in v6.1.1
             with open(output_path, "wb") as f:
                 for chunk in response:
                     f.write(chunk)
