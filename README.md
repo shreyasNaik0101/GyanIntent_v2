@@ -6,7 +6,8 @@
 
 ## 📺 Project Demo & Showcases
 - **Core Workflow Demo**: [Watch on ScreenRec](https://screenrec.com/share/EOuhMJ4aXq)
-- **Deep-Dive Presentation**: [Watch on Tella.tv](https://www.tella.tv/video/shreyass-video-44gc)
+- **Deep-Dive Presentation**: [Watch on Tella.tv #1](https://www.tella.tv/video/shreyass-video-44gc)
+- **Feature Showcase**: [Watch on Tella.tv #2](https://www.tella.tv/video/vid_cmo1wd6pl02iv04l2f80f6bct/view)
 
 ---
 
